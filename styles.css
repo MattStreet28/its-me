@@ -313,8 +313,65 @@ main {
   padding: 0 4px;
 }
 
+.vita-intro {
+  margin-top: 24px;
+  max-width: 600px;
+}
+
 /* ==========================================================================
-   9. Footer
+   9. Work-History-Tabelle (Flexbox, 3 Spalten)
+   ========================================================================== */
+
+.work-history {
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.work-table-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.work-role,
+.work-company,
+.work-year {
+  font-family: var(--font-sans);
+  font-size: var(--fs-table-row);
+  font-weight: var(--fw-table-row);
+  line-height: var(--lh-table-row);
+  letter-spacing: var(--ls-table-row);
+  white-space: nowrap;
+}
+
+.work-role {
+  color: var(--color-text);
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.work-company {
+  color: var(--color-text-muted);
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.work-year {
+  color: var(--color-text-muted);
+  flex: 0 0 auto;
+  min-width: 100px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   10. Footer
    ========================================================================== */
 
 .site-footer {
@@ -335,7 +392,7 @@ main {
 }
 
 /* ==========================================================================
-   10. Responsive
+   11. Responsive
    ========================================================================== */
 
 @media (max-width: 600px) {
@@ -353,6 +410,22 @@ main {
     padding-right: var(--container-padding-mobile);
   }
 
+  .work-table-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 16px 0;
+  }
+
+  .work-role,
+  .work-company,
+  .work-year {
+    flex: initial;
+    width: 100%;
+    min-width: 0;
+    text-align: left;
+  }
+
   :root {
     --fs-hero: 34px;
     --ls-hero: -1.6px;
@@ -362,7 +435,7 @@ main {
 }
 
 /* ==========================================================================
-   11. Motion Preferences
+   12. Motion Preferences
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
