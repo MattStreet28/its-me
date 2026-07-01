@@ -1,0 +1,375 @@
+/* ==========================================================================
+   1. CSS-Reset
+   ========================================================================== */
+
+html, body, #main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::selection {
+  background-color: #95E78E;
+  color: #062C02;
+}
+
+:root {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   2. Custom Properties — Farben
+   ========================================================================== */
+
+:root {
+  /* Primärfarben */
+  --color-almost-black: #0F1111;
+  --color-true-black: #141413;
+  --color-white: #FFFFFF;
+  --color-warm-off-white: #FFFDF7;
+  --color-warm-surface: #FAF9F5;
+
+  /* Akzentfarbe: Terracotta (statt Cyan/Sky-Blue der Vorlage) */
+  --color-accent: #C96E4B;
+  --color-accent-tint: rgba(201, 110, 75, 0.15);
+  --color-accent-glow: rgba(201, 110, 75, 0.24);
+
+  /* Sekundär */
+  --color-muted-grey: #6C7575;
+
+  /* Semantische Zuordnung */
+  --color-text: var(--color-almost-black);
+  --color-text-muted: var(--color-muted-grey);
+  --color-bg: var(--color-white);
+  --color-border: rgba(15, 17, 17, 0.15);
+}
+
+/* ==========================================================================
+   3. Custom Properties — Typografie-Skala
+   ========================================================================== */
+
+:root {
+  --font-serif: 'Crimson Pro', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Hero / Footer Headline */
+  --fs-hero: 48px;
+  --fw-hero: 300;
+  --lh-hero: 1.09;
+  --ls-hero: -2.4px;
+
+  /* Large Section Heading */
+  --fs-large-heading: 36px;
+  --fw-large-heading: 300;
+  --lh-large-heading: 1.09;
+  --ls-large-heading: -1.8px;
+
+  /* Section Title */
+  --fs-section-title: 24px;
+  --fw-section-title: 300;
+  --lh-section-title: 1.09;
+  --ls-section-title: -1.2px;
+
+  /* Body */
+  --fs-body: 16px;
+  --fw-body: 400;
+  --lh-body: 1.6;
+  --ls-body: -0.32px;
+
+  /* Nav / CTA Label */
+  --fs-nav-label: 15px;
+  --fw-nav-label: 500;
+  --lh-nav-label: 1.09;
+  --ls-nav-label: -0.75px;
+
+  /* Table Row / Work History */
+  --fs-table-row: 20px;
+  --fw-table-row: 400;
+  --lh-table-row: 1.09;
+  --ls-table-row: -1px;
+
+  /* Mono / Bio-Text */
+  --fs-mono: 14px;
+  --fw-mono: 300;
+  --lh-mono: 1.8;
+  --ls-mono: -0.7px;
+}
+
+/* ==========================================================================
+   4. Custom Properties — Layout & Spacing
+   ========================================================================== */
+
+:root {
+  --container-max-width: 810px;
+  --container-padding-desktop: 48px;
+  --container-padding-mobile: 20px;
+
+  --space-page-top: 20px;
+
+  --space-hero-top: 32px;
+  --space-hero-bottom: 20px;
+
+  --space-section-top: 50px;
+  --space-section-bottom: 70px;
+
+  --navbar-height: 101px;
+  --navbar-padding: 20px 48px 0;
+
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+}
+
+/* ==========================================================================
+   5. Basis
+   ========================================================================== */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-body);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Sichtbarer Keyboard-Fokus */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+a, button, [role="button"] {
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   6. Layout-Container
+   ========================================================================== */
+
+.section {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding-left: var(--container-padding-desktop);
+  padding-right: var(--container-padding-desktop);
+}
+
+main {
+  padding-top: calc(var(--navbar-height) + var(--space-page-top));
+}
+
+.section-hero {
+  padding-top: var(--space-hero-top);
+  padding-bottom: var(--space-hero-bottom);
+}
+
+.section-content {
+  padding-top: var(--space-section-top);
+  padding-bottom: var(--space-section-bottom);
+}
+
+.section-content + .section-content {
+  border-top: 1px solid var(--color-border);
+}
+
+/* ==========================================================================
+   7. Navigation
+   ========================================================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--navbar-padding);
+  height: var(--navbar-height);
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+/* Logo-Platzhalter: einfacher Kreis, kein Smiley */
+.navbar-logo {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-true-black);
+  flex-shrink: 0;
+}
+
+.btn-pill {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--color-almost-black);
+  border-radius: 70px;
+  padding: 10px 20px;
+  color: var(--color-almost-black);
+  font-family: var(--font-serif);
+  font-size: var(--fs-section-title);
+  font-weight: var(--fw-section-title);
+  letter-spacing: var(--ls-section-title);
+  transition: background-color var(--duration-normal) var(--ease-smooth),
+              color var(--duration-normal) var(--ease-smooth);
+}
+
+.btn-pill:hover {
+  background-color: var(--color-almost-black);
+  color: var(--color-white);
+}
+
+/* ==========================================================================
+   8. Typografie-Klassen
+   ========================================================================== */
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-hero);
+  line-height: var(--lh-hero);
+  letter-spacing: var(--ls-hero);
+  color: var(--color-almost-black);
+  max-width: 714px;
+}
+
+.hero-title em {
+  font-style: italic;
+  font-weight: var(--fw-hero);
+}
+
+.hero-subtext {
+  margin-top: 24px;
+  max-width: 480px;
+  color: var(--color-text);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-section-title);
+  font-weight: var(--fw-section-title);
+  line-height: var(--lh-section-title);
+  letter-spacing: var(--ls-section-title);
+  color: var(--color-almost-black);
+}
+
+.large-heading {
+  font-family: var(--font-serif);
+  font-size: var(--fs-large-heading);
+  font-weight: var(--fw-large-heading);
+  line-height: var(--lh-large-heading);
+  letter-spacing: var(--ls-large-heading);
+  color: var(--color-almost-black);
+}
+
+.body-text {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-body);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-body);
+  color: var(--color-text);
+}
+
+.mono-text {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  font-weight: var(--fw-mono);
+  line-height: var(--lh-mono);
+  letter-spacing: var(--ls-mono);
+  color: var(--color-text);
+}
+
+/* Akzent-Highlight auf Schlüsselwörtern (Terracotta statt Blau) */
+.highlight {
+  background-color: var(--color-accent-tint);
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+/* ==========================================================================
+   9. Footer
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--color-true-black);
+  color: var(--color-warm-off-white);
+  padding: var(--space-section-top) var(--container-padding-desktop) var(--space-section-bottom);
+}
+
+.footer-headline {
+  font-family: var(--font-serif);
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-hero);
+  line-height: var(--lh-hero);
+  letter-spacing: var(--ls-hero);
+  color: var(--color-warm-off-white);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   10. Responsive
+   ========================================================================== */
+
+@media (max-width: 600px) {
+  .section {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+  }
+
+  .navbar {
+    padding: var(--space-page-top) var(--container-padding-mobile) 0;
+  }
+
+  .site-footer {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+  }
+
+  :root {
+    --fs-hero: 34px;
+    --ls-hero: -1.6px;
+    --fs-large-heading: 28px;
+    --ls-large-heading: -1.3px;
+  }
+}
+
+/* ==========================================================================
+   11. Motion Preferences
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
