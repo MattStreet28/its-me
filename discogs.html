@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discogs Sammlung Viewer – Agile Coach &amp; Scrum Master</title>
+  <meta name="description" content="Discogs Sammlung Viewer – Projekt-Detailseite">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="navbar-logo" aria-label="Zurück zur Startseite">
+      <span class="nav-logo" aria-hidden="true">👋</span>
+    </a>
+    <a href="index.html#kontakt" class="btn-pill">Kontakt</a>
+  </header>
+  <div class="nav-fade"></div>
+
+  <main>
+
+    <section class="project-detail-hero">
+      <img
+        src="Discogs/Discogs Header.png"
+        alt="Discogs Sammlung Viewer – Hauptansicht"
+        class="project-hero-img"
+      >
+    </section>
+
+    <section class="project-detail-content">
+      <div class="project-layout-wrapper">
+        <div class="project-main">
+          <h1 class="project-headline"><em>Discogs</em> Viewer</h1>
+          <p class="project-subtext">
+            Lokale Web App auf meinem Rechner
+          </p>
+
+          <div class="project-divider"></div>
+
+          <div class="project-text">
+            <div class="project-text-column">
+              <p>
+                Discogs ist eine der weltweit größten Online-Datenbanken und Marktplätze für physische Musikmedien wie Vinyl, CDs und Kassetten. Nutzer können dort ihre eigene Musiksammlung digital katalogisieren, Veröffentlichungen detailgetreu recherchieren und Tonträger mit Sammlern weltweit handeln.
+              </p>
+              <p>
+                Mein erstes echtes Projekt mit Claude Code: Nach ein paar kleineren Dashboards in Claude Projects wollte ich es jetzt endlich wissen und so richtig ins „Vibe Coding" einsteigen. Das Vorgehen war absolut Hands-on: Gemini durfte als Sparringspartner einspringen, um mir zu zeigen, wie ich GitHub einrichte, das Terminal vorbereite, Claude anbinde und den Discogs-API-Key besorge.
+              </p>
+            </div>
+
+            <div class="project-text-column">
+              <p>
+                Sobald die Infrastruktur stand, wurde einfach losgepromptet. Für das Design ließ ich mir verschiedene HTML-Optionen ausgeben, um intuitiv die beste Variante auszuwählen. Wie die Applikation am Ende aussehen und was sie genau können soll, ist komplett organisch gewachsen und war vorher nicht starr geplant.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-detail-section">
+            <div class="project-detail-image">
+              <img src="Discogs/Detail 2.png" alt="Discogs Viewer Detail">
+            </div>
+
+            <div class="project-detail-boxes">
+              <div class="project-detail-box">
+                <h4 class="project-detail-box-title">Market Value</h4>
+                <p>Zeigt den Mittelwert aller realen Verkaufspreise dieser Platte auf dem Discogs-Marktplatz.</p>
+              </div>
+              <div class="project-detail-box">
+                <h4 class="project-detail-box-title">Hot or Not</h4>
+                <p>Ist die Ratio aus der Anzahl der Einträge der Platte auf den Wantlists der User und den Einträgen in den Sammlungen. Zeigt, wie begehrt eine Platte ist.</p>
+              </div>
+              <div class="project-detail-box">
+                <h4 class="project-detail-box-title">Audio Preview</h4>
+                <p>Per Klick auf ein Cover öffnet sich unten ein Player, der sticky ist und über die iTunes Search API 30-Sekunden-Snippets der Titel auf der Platte abspielt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-sidebar">
+          <div class="project-meta-group">
+            <span class="project-meta-label">Year</span>
+            <p class="project-meta-value">2025</p>
+          </div>
+          <div class="project-meta-group">
+            <span class="project-meta-label">Kategorien</span>
+            <p class="project-meta-value">No-Code / Low-Code</p>
+            <p class="project-meta-value">Local App</p>
+            <p class="project-meta-value">API Integration</p>
+            <p class="project-meta-value">Daten Visualisierung</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-headline">[Kontakt-Statement Platzhalter]</p>
+  </footer>
+
+</body>
+</html>
