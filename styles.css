@@ -49,6 +49,10 @@ h1, h2, h3, h4, h5, h6, p, figure {
 
   /* Sekundär */
   --color-muted-grey: #6C7575;
+  --color-secondary-text: #6B6B6B;
+
+  /* Buttons */
+  --color-btn-solid: #1A1A1A;
 
   /* Semantische Zuordnung */
   --color-text: var(--color-almost-black);
@@ -71,6 +75,10 @@ h1, h2, h3, h4, h5, h6, p, figure {
   --fw-hero: 300;
   --lh-hero: 1.09;
   --ls-hero: -2.4px;
+
+  /* Hero-Title (eigenständig größer als Footer-Headline) */
+  --fs-hero-title: 56px;
+  --ls-hero-title: -2px;
 
   /* Large Section Heading */
   --fs-large-heading: 36px;
@@ -117,6 +125,7 @@ h1, h2, h3, h4, h5, h6, p, figure {
   --container-max-width: 810px;
   --container-padding-desktop: 48px;
   --container-padding-mobile: 20px;
+  --hero-padding-mobile: 24px;
 
   --space-page-top: 20px;
 
@@ -183,8 +192,11 @@ main {
 }
 
 .section-hero {
+  max-width: 820px;
   padding-top: var(--space-hero-top);
   padding-bottom: var(--space-hero-bottom);
+  padding-left: var(--container-padding-desktop);
+  padding-right: var(--container-padding-desktop);
 }
 
 .section-content {
@@ -218,8 +230,8 @@ main {
 /* Logo-Platzhalter: einfacher Kreis, kein Smiley */
 .navbar-logo {
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background-color: var(--color-true-black);
   flex-shrink: 0;
@@ -227,22 +239,20 @@ main {
 
 .btn-pill {
   display: inline-block;
-  background: transparent;
-  border: 1px solid var(--color-almost-black);
-  border-radius: 70px;
+  background-color: var(--color-btn-solid);
+  border: none;
+  border-radius: 999px;
   padding: 10px 20px;
-  color: var(--color-almost-black);
-  font-family: var(--font-serif);
-  font-size: var(--fs-section-title);
-  font-weight: var(--fw-section-title);
-  letter-spacing: var(--ls-section-title);
-  transition: background-color var(--duration-normal) var(--ease-smooth),
-              color var(--duration-normal) var(--ease-smooth);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: var(--fs-nav-label);
+  font-weight: var(--fw-nav-label);
+  letter-spacing: var(--ls-nav-label);
+  transition: opacity var(--duration-normal) var(--ease-smooth);
 }
 
 .btn-pill:hover {
-  background-color: var(--color-almost-black);
-  color: var(--color-white);
+  opacity: 0.85;
 }
 
 /* ==========================================================================
@@ -251,23 +261,16 @@ main {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: var(--fs-hero);
+  font-size: var(--fs-hero-title);
   font-weight: var(--fw-hero);
   line-height: var(--lh-hero);
-  letter-spacing: var(--ls-hero);
+  letter-spacing: var(--ls-hero-title);
   color: var(--color-almost-black);
-  max-width: 714px;
 }
 
 .hero-title em {
   font-style: italic;
   font-weight: var(--fw-hero);
-}
-
-.hero-subtext {
-  margin-top: 24px;
-  max-width: 480px;
-  color: var(--color-text);
 }
 
 .section-title {
@@ -297,6 +300,13 @@ main {
   color: var(--color-text);
 }
 
+.hero-subtext {
+  margin-top: 24px;
+  max-width: 520px;
+  text-align: left;
+  color: var(--color-secondary-text);
+}
+
 .mono-text {
   font-family: var(--font-mono);
   font-size: var(--fs-mono);
@@ -306,9 +316,10 @@ main {
   color: var(--color-text);
 }
 
-/* Akzent-Highlight auf Schlüsselwörtern (Terracotta statt Blau) */
+/* Highlight für "teams" im Hero: bewusste Ausnahme in Blau statt Terracotta */
 .highlight {
-  background-color: var(--color-accent-tint);
+  background-color: rgba(5, 154, 255, 0.15);
+  color: #059AFF;
   border-radius: 4px;
   padding: 0 4px;
 }
@@ -401,6 +412,11 @@ main {
     padding-right: var(--container-padding-mobile);
   }
 
+  .section-hero {
+    padding-left: var(--hero-padding-mobile);
+    padding-right: var(--hero-padding-mobile);
+  }
+
   .navbar {
     padding: var(--space-page-top) var(--container-padding-mobile) 0;
   }
@@ -429,6 +445,8 @@ main {
   :root {
     --fs-hero: 34px;
     --ls-hero: -1.6px;
+    --fs-hero-title: 36px;
+    --ls-hero-title: -1.4px;
     --fs-large-heading: 28px;
     --ls-large-heading: -1.3px;
   }
