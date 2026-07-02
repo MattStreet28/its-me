@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6, p, figure {
   --ls-hero: -2.4px;
 
   /* Hero-Title (eigenständig größer als Footer-Headline) */
-  --fs-hero-title: 56px;
+  --fs-hero-title: 48px;
   --ls-hero-title: -2px;
 
   /* Large Section Heading */
@@ -123,7 +123,7 @@ h1, h2, h3, h4, h5, h6, p, figure {
 
 :root {
   --container-max-width: 810px;
-  --container-padding-desktop: 48px;
+  --container-padding-desktop: 72px;
   --container-padding-mobile: 20px;
   --hero-padding-mobile: 24px;
 
@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6, p, figure {
   --space-section-bottom: 70px;
 
   --navbar-height: 101px;
-  --navbar-padding: 20px 48px 0;
+  --navbar-padding: 55px var(--container-padding-desktop) 0;
 
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --duration-fast: 200ms;
@@ -185,6 +185,7 @@ a, button, [role="button"] {
   margin: 0 auto;
   padding-left: var(--container-padding-desktop);
   padding-right: var(--container-padding-desktop);
+  scroll-margin-top: calc(var(--navbar-height) + var(--space-page-top));
 }
 
 main {
@@ -192,11 +193,12 @@ main {
 }
 
 .section-hero {
-  max-width: 820px;
+  max-width: 900px;
   padding-top: var(--space-hero-top);
   padding-bottom: var(--space-hero-bottom);
   padding-left: var(--container-padding-desktop);
   padding-right: var(--container-padding-desktop);
+  scroll-margin-top: calc(var(--navbar-height) + var(--space-page-top));
 }
 
 .section-content {
@@ -227,14 +229,28 @@ main {
   z-index: 100;
 }
 
-/* Logo-Platzhalter: einfacher Kreis, kein Smiley */
 .navbar-logo {
-  display: block;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background-color: var(--color-true-black);
   flex-shrink: 0;
+}
+
+@keyframes wave-bounce {
+  0%   { transform: rotate(0deg) translateY(0px); }
+  10%  { transform: rotate(14deg) translateY(-4px); }
+  20%  { transform: rotate(-8deg) translateY(0px); }
+  30%  { transform: rotate(14deg) translateY(-3px); }
+  40%  { transform: rotate(-4deg) translateY(0px); }
+  50%  { transform: rotate(10deg) translateY(-2px); }
+  60%  { transform: rotate(0deg) translateY(0px); }
+  100% { transform: rotate(0deg) translateY(0px); }
+}
+
+.nav-logo {
+  display: inline-block;
+  font-size: 64px;
+  transform-origin: 70% 70%;
+  animation: wave-bounce 2.5s ease-in-out infinite;
+  line-height: 1;
+  cursor: default;
 }
 
 .btn-pill {
@@ -271,6 +287,12 @@ main {
 .hero-title em {
   font-style: italic;
   font-weight: var(--fw-hero);
+}
+
+.hero-deko {
+  font-size: 0.45em;
+  vertical-align: middle;
+  margin-left: 4px;
 }
 
 .section-title {
@@ -418,7 +440,7 @@ main {
   }
 
   .navbar {
-    padding: var(--space-page-top) var(--container-padding-mobile) 0;
+    padding: 55px var(--container-padding-mobile) 0;
   }
 
   .site-footer {
@@ -449,6 +471,12 @@ main {
     --ls-hero-title: -1.4px;
     --fs-large-heading: 28px;
     --ls-large-heading: -1.3px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding-desktop: 140px;
   }
 }
 
