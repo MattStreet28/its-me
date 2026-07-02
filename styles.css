@@ -389,11 +389,19 @@ main {
    9. Work-History-Tabelle (Flexbox, 3 Spalten)
    ========================================================================== */
 
+.section-work-history {
+  padding-top: var(--space-section-top);
+  padding-bottom: var(--space-section-bottom);
+  padding-left: var(--container-padding-desktop);
+  padding-right: var(--container-padding-desktop);
+  max-width: none;
+  scroll-margin-top: calc(var(--navbar-height) + var(--space-page-top));
+}
+
 .work-history {
   list-style: none;
-  margin: 40px 0 0;
+  margin: 0;
   padding: 0;
-  border-top: 1px solid var(--color-border);
 }
 
 .work-table-row {
@@ -438,7 +446,53 @@ main {
 }
 
 /* ==========================================================================
-   10. Footer
+   10. Philosophy Section (3-Spalten-Layout)
+   ========================================================================== */
+
+.section-philosophy {
+  padding-top: 120px;
+  padding-bottom: var(--space-section-bottom);
+  padding-left: var(--container-padding-desktop);
+  padding-right: var(--container-padding-desktop);
+  scroll-margin-top: calc(var(--navbar-height) + var(--space-page-top));
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  gap: 18px;
+  max-width: calc(100% - 15px);
+}
+
+.philosophy-headline {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  color: var(--color-almost-black);
+  padding-left: 45px;
+}
+
+.philosophy-text {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  font-weight: var(--fw-mono);
+  line-height: var(--lh-mono);
+  letter-spacing: var(--ls-mono);
+  color: var(--color-text);
+}
+
+.philosophy-text p {
+  margin: 0 0 1.8em 0;
+}
+
+.philosophy-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   11. Footer
    ========================================================================== */
 
 .site-footer {
@@ -459,7 +513,7 @@ main {
 }
 
 /* ==========================================================================
-   11. Responsive
+   12. Responsive
    ========================================================================== */
 
 @media (max-width: 600px) {
@@ -471,6 +525,16 @@ main {
   .section-hero {
     padding-left: var(--hero-padding-mobile);
     padding-right: var(--hero-padding-mobile);
+  }
+
+  .section-philosophy {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+  }
+
+  .section-work-history {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
   }
 
   .navbar {
@@ -498,6 +562,16 @@ main {
     text-align: left;
   }
 
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 100%;
+  }
+
+  .philosophy-headline {
+    padding-left: 0;
+  }
+
   :root {
     --fs-hero: 34px;
     --ls-hero: -1.6px;
@@ -508,14 +582,37 @@ main {
   }
 }
 
+@media (min-width: 601px) and (max-width: 1023px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 100%;
+  }
+
+  .philosophy-headline {
+    grid-column: 1 / -1;
+    padding-left: 0;
+  }
+}
+
 @media (min-width: 1024px) {
   :root {
     --container-padding-desktop: 140px;
   }
+
+  .section-philosophy {
+    padding-left: var(--container-padding-desktop);
+    padding-right: var(--container-padding-desktop);
+  }
+
+  .section-work-history {
+    padding-left: var(--container-padding-desktop);
+    padding-right: var(--container-padding-desktop);
+  }
 }
 
 /* ==========================================================================
-   12. Motion Preferences
+   13. Motion Preferences
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
