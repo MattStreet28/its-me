@@ -798,32 +798,6 @@ main {
 }
 
 /* ==========================================================================
-   12b. Zertifikate / Badges
-   ========================================================================== */
-
-.badges-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.badge-item {
-  aspect-ratio: 1 / 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.badge-item img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-/* ==========================================================================
    13. Footer
    ========================================================================== */
 
@@ -877,7 +851,14 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-contact-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 16px;
 }
 
@@ -905,6 +886,21 @@ main {
 
 .footer-icon:hover {
   opacity: 0.6;
+}
+
+.footer-badges {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(-36px);
+}
+
+.footer-badge {
+  height: 28px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 /* ==========================================================================
@@ -1015,11 +1011,6 @@ main {
   }
 
   .project-detail-boxes {
-    gap: 16px;
-  }
-
-  .badges-grid {
-    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
 
