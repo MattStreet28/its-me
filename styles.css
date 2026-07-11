@@ -455,7 +455,7 @@ main {
    ========================================================================== */
 
 .section-philosophy {
-  padding-top: 110px;
+  padding-top: 50px;
   padding-bottom: var(--space-section-bottom);
   padding-left: var(--container-padding-desktop);
   padding-right: var(--container-padding-desktop);
@@ -501,7 +501,7 @@ main {
    ========================================================================== */
 
 .section-projects {
-  padding-top: 120px;
+  padding-top: 60px;
   padding-bottom: var(--space-section-bottom);
   padding-left: var(--container-padding-desktop);
   padding-right: var(--container-padding-desktop);
@@ -782,6 +782,55 @@ main {
   transform: rotate(1.2deg) translate(12px, 10px);
 }
 
+.project-detail-pairs {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.project-detail-pair {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+  align-items: start;
+}
+
+.project-detail-pair img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.project-detail-pair:nth-of-type(1) .project-detail-box {
+  transform: rotate(-1.5deg) translate(10px, 8px);
+}
+
+.project-detail-pair:nth-of-type(2) .project-detail-box {
+  transform: rotate(1deg) translate(16px, 22px);
+}
+
+.project-detail-pair:nth-of-type(3) .project-detail-box {
+  transform: rotate(-0.8deg) translate(7px, 16px);
+}
+
+.project-detail-pair:nth-of-type(4) .project-detail-box {
+  transform: rotate(1.2deg) translate(12px, 10px);
+}
+
+.project-detail-pair:nth-of-type(2n) {
+  grid-template-columns: 280px 1fr;
+}
+
+.project-detail-pair:nth-of-type(2n) img {
+  order: 2;
+}
+
+.project-detail-pair:nth-of-type(2n) .project-detail-box {
+  order: 1;
+}
+
 .project-detail-box-title {
   font-family: var(--font-serif);
   font-size: 22px;
@@ -1021,6 +1070,21 @@ main {
   .project-detail-section {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .project-detail-pair,
+  .project-detail-pair:nth-of-type(2n) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-detail-pair .project-detail-box,
+  .project-detail-pair img {
+    order: initial;
+  }
+
+  .project-detail-pair .project-detail-box {
+    transform: none;
   }
 
   .project-detail-boxes {
