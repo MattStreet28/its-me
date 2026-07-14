@@ -2,7 +2,7 @@
    1. CSS-Reset
    ========================================================================== */
 
-html, body, #main {
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -37,15 +37,10 @@ h1, h2, h3, h4, h5, h6, p, figure {
 :root {
   /* Primärfarben */
   --color-almost-black: #0F1111;
-  --color-true-black: #141413;
   --color-white: #FFFFFF;
-  --color-warm-off-white: #FFFDF7;
-  --color-warm-surface: #FAF9F5;
 
   /* Akzentfarbe: Terracotta (statt Cyan/Sky-Blue der Vorlage) */
   --color-accent: #C96E4B;
-  --color-accent-tint: rgba(201, 110, 75, 0.15);
-  --color-accent-glow: rgba(201, 110, 75, 0.24);
 
   /* Sekundär */
   --color-muted-grey: #6C7575;
@@ -71,20 +66,12 @@ h1, h2, h3, h4, h5, h6, p, figure {
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Hero / Footer Headline */
-  --fs-hero: 48px;
   --fw-hero: 300;
   --lh-hero: 1.09;
-  --ls-hero: -2.4px;
 
   /* Hero-Title (eigenständig größer als Footer-Headline) */
   --fs-hero-title: 48px;
   --ls-hero-title: -2px;
-
-  /* Large Section Heading */
-  --fs-large-heading: 36px;
-  --fw-large-heading: 300;
-  --lh-large-heading: 1.09;
-  --ls-large-heading: -1.8px;
 
   /* Section Title */
   --fs-section-title: 24px;
@@ -122,7 +109,6 @@ h1, h2, h3, h4, h5, h6, p, figure {
    ========================================================================== */
 
 :root {
-  --container-max-width: 810px;
   --container-padding-desktop: 72px;
   --container-padding-mobile: 20px;
   --hero-padding-mobile: 24px;
@@ -139,9 +125,7 @@ h1, h2, h3, h4, h5, h6, p, figure {
   --navbar-padding: 55px var(--container-padding-desktop) 0;
 
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  --duration-fast: 200ms;
   --duration-normal: 300ms;
-  --duration-slow: 500ms;
 }
 
 /* ==========================================================================
@@ -180,14 +164,6 @@ a, button, [role="button"] {
    6. Layout-Container
    ========================================================================== */
 
-.section {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding-left: var(--container-padding-desktop);
-  padding-right: var(--container-padding-desktop);
-  scroll-margin-top: calc(var(--navbar-height) + var(--space-page-top));
-}
-
 main {
   padding-top: calc(var(--navbar-height) + var(--space-page-top));
   max-width: 1400px;
@@ -201,15 +177,6 @@ main {
   padding-left: var(--container-padding-desktop);
   padding-right: var(--container-padding-desktop);
   scroll-margin-top: calc(var(--navbar-height) + var(--space-page-top));
-}
-
-.section-content {
-  padding-top: var(--space-section-top);
-  padding-bottom: var(--space-section-bottom);
-}
-
-.section-content + .section-content {
-  border-top: 1px solid var(--color-border);
 }
 
 /* ==========================================================================
@@ -291,7 +258,7 @@ main {
   transform-origin: 70% 70%;
   animation: wave-bounce 2.5s ease-in-out infinite;
   line-height: 1;
-  cursor: default;
+  cursor: pointer;
 }
 
 .btn-pill {
@@ -347,15 +314,6 @@ main {
   color: var(--color-almost-black);
 }
 
-.large-heading {
-  font-family: var(--font-serif);
-  font-size: var(--fs-large-heading);
-  font-weight: var(--fw-large-heading);
-  line-height: var(--lh-large-heading);
-  letter-spacing: var(--ls-large-heading);
-  color: var(--color-almost-black);
-}
-
 .body-text {
   font-family: var(--font-sans);
   font-size: var(--fs-body);
@@ -372,26 +330,12 @@ main {
   color: var(--color-secondary-text);
 }
 
-.mono-text {
-  font-family: var(--font-mono);
-  font-size: var(--fs-mono);
-  font-weight: var(--fw-mono);
-  line-height: var(--lh-mono);
-  letter-spacing: var(--ls-mono);
-  color: var(--color-text);
-}
-
 /* Highlight für "teams" im Hero: bewusste Ausnahme in Blau statt Terracotta */
 .highlight {
   background-color: rgba(5, 154, 255, 0.15);
   color: #059AFF;
   border-radius: 4px;
   padding: 0 4px;
-}
-
-.vita-intro {
-  margin-top: 24px;
-  max-width: 600px;
 }
 
 /* ==========================================================================
@@ -485,7 +429,7 @@ main {
 
 .philosophy-text {
   font-family: var(--font-mono);
-  font-size: var(--fs-mono);
+  font-size: 14px;
   font-weight: var(--fw-mono);
   line-height: var(--lh-mono);
   letter-spacing: var(--ls-mono);
@@ -553,20 +497,6 @@ main {
 
 .project-card-medium {
   min-height: 380px;
-}
-
-.project-title {
-  font-family: var(--font-serif);
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-  color: white;
-  margin: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
 }
 
 .project-card-1 {
@@ -652,13 +582,6 @@ main {
   padding-top: var(--space-hero-top);
   padding-left: var(--container-padding-desktop);
   padding-right: var(--container-padding-desktop);
-}
-
-.project-hero-image {
-  width: 100%;
-  height: 520px;
-  background-color: #B8B8B8;
-  border-radius: 20px;
 }
 
 .project-hero-img {
@@ -766,53 +689,8 @@ main {
   margin-bottom: 0;
 }
 
-.project-detail-section {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 40px;
-  margin-top: 48px;
-  align-items: start;
-}
-
-.project-detail-image {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.project-detail-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-
-.project-detail-boxes {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 40px;
-}
-
 .project-detail-box {
   padding: 0;
-}
-
-.project-detail-box:nth-child(1) {
-  transform: rotate(-1.5deg) translate(10px, 8px);
-}
-
-.project-detail-box:nth-child(2) {
-  transform: rotate(1deg) translate(16px, 22px);
-}
-
-.project-detail-box:nth-child(3) {
-  transform: rotate(-0.8deg) translate(7px, 16px);
-}
-
-.project-detail-box:nth-child(4) {
-  transform: rotate(1.2deg) translate(12px, 10px);
 }
 
 .project-detail-pairs {
@@ -864,11 +742,8 @@ main {
   order: 1;
 }
 
-.project-detail-pair:first-of-type {
-  grid-template-columns: 1fr 280px;
-}
-
-.project-detail-pair:first-of-type img {
+/* Diagramm-Bild (z. B. Health-Check-Flow): dezenter Rahmen statt Kontrast auf Weiß */
+.project-detail-diagram {
   background-color: #FAFAF8;
   border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 28px;
@@ -1011,11 +886,6 @@ main {
    ========================================================================== */
 
 @media (max-width: 600px) {
-  .section {
-    padding-left: var(--container-padding-mobile);
-    padding-right: var(--container-padding-mobile);
-  }
-
   .section-hero {
     padding-left: var(--hero-padding-mobile);
     padding-right: var(--hero-padding-mobile);
@@ -1095,10 +965,6 @@ main {
     gap: 24px;
   }
 
-  .project-hero-image {
-    height: 300px;
-  }
-
   .project-hero-img {
     height: 260px;
   }
@@ -1112,14 +978,8 @@ main {
     gap: 32px;
   }
 
-  .project-detail-section {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
   .project-detail-pair,
-  .project-detail-pair:nth-of-type(2n),
-  .project-detail-pair:first-of-type {
+  .project-detail-pair:nth-of-type(2n) {
     grid-template-columns: 1fr;
     gap: 16px;
   }
@@ -1133,20 +993,7 @@ main {
     transform: none;
   }
 
-  .project-detail-boxes {
-    gap: 16px;
-  }
-
-  .project-detail-box:nth-child(1),
-  .project-detail-box:nth-child(2),
-  .project-detail-box:nth-child(3),
-  .project-detail-box:nth-child(4) {
-    transform: none;
-  }
-
   :root {
-    --fs-hero: 34px;
-    --ls-hero: -1.6px;
     --fs-hero-title: 36px;
     --ls-hero-title: -1.4px;
     --fs-large-heading: 28px;
