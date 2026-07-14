@@ -818,6 +818,12 @@ main {
   text-align: left;
 }
 
+.footer-headline .hero-deko {
+  font-size: 0.4em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
 .footer-headline em {
   font-style: italic;
   font-weight: var(--fw-hero);
