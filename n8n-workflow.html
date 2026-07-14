@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backlog Autopilot – Agile Coach &amp; Scrum Master</title>
+  <meta name="description" content="n8n-Workflow zur automatischen Backlog-Verbesserung – Projekt-Detailseite">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html#projekte" class="navbar-logo" aria-label="Zurück zur Startseite">
+      <span class="nav-logo" aria-hidden="true">👋</span>
+    </a>
+    <a href="mailto:mathias.strasser@gmx.de" class="btn-pill">Kontakt</a>
+  </header>
+  <div class="nav-fade"></div>
+
+  <main>
+
+    <section class="project-detail-hero">
+      <img
+        src="n8n/Header Detail.png"
+        alt="Backlog Autopilot – n8n-Workflow im Editor"
+        class="project-hero-img"
+      >
+    </section>
+
+    <section class="project-detail-content">
+      <div class="project-layout-wrapper">
+        <div class="project-main">
+          <h1 class="project-headline">Backlog <em>Autopilot</em></h1>
+          <p class="project-subtext">
+            n8n-Workflow verbessert automatisch rohe Linear-Tickets zu vollständigen User Stories
+          </p>
+
+          <div class="project-divider"></div>
+
+          <div class="project-text">
+            <div class="project-text-column">
+              <p>
+                Backlogs sind oft schneller befüllt als sauber ausformuliert: Ein Ticket wie „Warenkorb anzeigen" hält die Idee fest, reicht aber nicht zur Bearbeitung – kein User-Story-Format, keine Akzeptanzkriterien.
+              </p>
+              <p>
+                Ende 2025 habe ich dazu einen n8n-Workflow gebaut, vor allem um mit n8n selbst rumzuspielen: Backlog aus Linear ziehen, jedes Ticket durch ein LLM schicken, verbesserte Version zurückschreiben. Kleiner Case, guter Einstieg. Mittlerweile macht Rovo in Jira genau das per Default – n8n als Automatisierungsplattform bleibt aber spannend, die Möglichkeiten sind fast unendlich.
+              </p>
+            </div>
+
+            <div class="project-text-column">
+              <p>
+                Ein starker Case könnte zum Beispiel sein: echte Wissenssynthese statt Ticket-Kosmetik. n8n aggregiert Daten aus Jira, Slack, Teams, Git – ein lokales Open-Source-LLM (z.B. Llama via Ollama) analysiert sie auf eigener Infrastruktur. Sensible Daten verlassen das Unternehmen nie.
+              </p>
+              <p>
+                Denkbar ist ein KI-gestützter Status auf Knopfdruck: Statt für jede Abstimmung ein Meeting aufzusetzen, holen sich Teammitglieder bei Bedarf den aktuellen Stand – das Daily bleibt, aber Zwischen-Syncs entfallen. Oder ein Refinement-Briefing, das Kontext aus Wiki, alten Tickets und Slack zusammenzieht, damit der PO auf Basis von Fakten priorisiert statt auf Bauchgefühl – bessere Entscheidungen, weniger teure Fehlentwicklungen.
+              </p>
+              <p>
+                n8n orchestriert die Quellen, das lokale LLM übernimmt das Denken – datenschutzkonform.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-sidebar">
+          <div class="project-meta-group">
+            <span class="project-meta-label">Year</span>
+            <p class="project-meta-value">2025</p>
+          </div>
+          <div class="project-meta-group">
+            <span class="project-meta-label">Kategorien</span>
+            <p class="project-meta-value">Automatisierung</p>
+            <p class="project-meta-value">KI &amp; Backlog Management</p>
+            <p class="project-meta-value">No-Code</p>
+          </div>
+          <div class="project-meta-group">
+            <span class="project-meta-label">Stack</span>
+            <p class="project-meta-value">n8n</p>
+            <p class="project-meta-value">Google Gemini</p>
+            <p class="project-meta-value">Linear API</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-detail-pairs">
+        <div class="project-detail-pair">
+          <img src="n8n/Backlog.png" alt="Linear-Backlog vor dem Workflow-Lauf">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Der Ausgangs-Backlog</h4>
+            <p>13 Tickets im Linear Backlog des Beispielprojekts „Deliver" der Inhalt von unterschiedlicher Qualität.</p>
+          </div>
+        </div>
+        <div class="project-detail-pair">
+          <img src="n8n/Del7.png" alt="Linear-Ticket DEL-7 im Rohzustand">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Ein Ticket im Rohzustand</h4>
+            <p>Beispiel DEL-7 „Warenkorb anzeigen": keine Struktur keine Testkriterien.</p>
+          </div>
+        </div>
+        <div class="project-detail-pair">
+          <img src="n8n/Prompt.png" alt="n8n-Node Message a Model mit Gemini-Prompt">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Der Prompt</h4>
+            <p>Für jedes Ticket schickt der Workflow Titel und Kontext an Gemini, mit fester Rollenanweisung „Du bist ein erfahrener Product Owner. Verbessere die folgende User Story. Formuliere Rolle, Ziel, Nutzen. Überarbeite die ACs und ergänze 3 Testkriterien."</p>
+          </div>
+        </div>
+        <div class="project-detail-pair">
+          <img src="n8n/Backlog neu.png" alt="Linear-Backlog nach dem Workflow-Lauf mit AI-verbesserten Tickets">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Der neue Backlog</h4>
+            <p>Nach dem Lauf ist der Backlog von 13 auf 26 Tickets gewachsen: Jedes Original bekommt eine „AI Verbessert"-Version, statt einfach überschrieben zu werden.</p>
+          </div>
+        </div>
+        <div class="project-detail-pair">
+          <img src="n8n/Del7 Verbessert.png" alt="AI-verbessertes Ticket DEL-256 mit vollständiger User Story">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Vorher/Nachher am Beispiel</h4>
+            <p>Aus „Warenkorb anzeigen" wird eine vollständige User Story im „Als Nutzer möchte ich..."-Format ACs überarbeitet mit Testkriterien.</p>
+          </div>
+        </div>
+        <div class="project-detail-pair">
+          <img src="n8n/Kachel.png" alt="Der komplette n8n-Workflow im Überblick">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Der Workflow im Überblick</h4>
+            <p><strong>Get many issues</strong> holt alle Tickets aus Linear, <strong>Filter</strong> behält nur den Backlog. <strong>Loop Over Items</strong> geht sie einzeln durch: Jedes landet bei <strong>Message a model</strong>, wo Gemini mit dem Product-Owner-Prompt eine verbesserte Version erzeugt. <strong>Code in JavaScript</strong> parst die JSON-Antwort, <strong>Create an issue</strong> legt daraus das neue „AI Verbessert"-Ticket in Linear an – Original bleibt unangetastet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="kontakt">
+    <div class="footer-inner">
+      <p class="footer-headline">Learn Iterate <em>Elevate</em></p>
+      <div class="footer-contact">
+        <div class="footer-contact-left">
+          <p class="footer-name">Mathias Strasser, Agile Coach – AI Enthusiast</p>
+          <div class="footer-socials">
+            <a href="https://linkedin.com/in/mathias-straßer" class="footer-icon" aria-label="LinkedIn-Profil" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:mathias.strasser@gmx.de" class="footer-icon" aria-label="E-Mail schreiben">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-badges">
+          <img src="Badges/SA CSM.png" alt="Certified Scrum Master (Scrum Alliance)" class="footer-badge">
+          <img src="Badges/SAFe Scrum Master 4.png" alt="SAFe Scrum Master 4" class="footer-badge">
+          <img src="Badges/SAFe Practioner.png" alt="SAFe Practitioner" class="footer-badge">
+          <img src="Badges/SAFe SPC.png" alt="SAFe Practice Consultant (SPC) 5" class="footer-badge">
+          <img src="Badges/Certified Delivery .png" alt="Certified Delivery Professional (CDP)" class="footer-badge">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
