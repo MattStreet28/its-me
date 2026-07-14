@@ -1,6 +1,5 @@
 .DS_Store
 .claude/settings.local.json
 .claude/launch.json
-styleguide.md
 node_modules/
 .env
