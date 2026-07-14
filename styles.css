@@ -73,12 +73,6 @@ h1, h2, h3, h4, h5, h6, p, figure {
   --fs-hero-title: 48px;
   --ls-hero-title: -2px;
 
-  /* Section Title */
-  --fs-section-title: 24px;
-  --fw-section-title: 300;
-  --lh-section-title: 1.09;
-  --ls-section-title: -1.2px;
-
   /* Body */
   --fs-body: 16px;
   --fw-body: 400;
@@ -307,10 +301,10 @@ main {
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: var(--fs-section-title);
-  font-weight: var(--fw-section-title);
-  line-height: var(--lh-section-title);
-  letter-spacing: var(--ls-section-title);
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
   color: var(--color-almost-black);
 }
 
@@ -810,7 +804,7 @@ main {
 
 .footer-headline {
   font-family: var(--font-serif);
-  font-size: clamp(45px, 6vw, 101px);
+  font-size: clamp(40px, 6vw, 96px);
   font-weight: var(--fw-hero);
   line-height: var(--lh-hero);
   letter-spacing: calc(-0.02em + 5pt);
