@@ -1,6 +1,6 @@
 # Styleguide — Inspired by bradleyziffer.com
 
-> Persönliche Portfolio-Seite von Bradley Ziffer. Gebaut mit Framer.
+> Persönliche Portfolio-Seite inspiriert von Bradley Ziffer. Gebaut mit Framer.
 > Charakter: organisch, intellektuell, handwerklich — minimalistisch mit bewussten Akzenten.
 
 ---
