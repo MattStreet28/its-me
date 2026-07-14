@@ -624,6 +624,26 @@ main {
   background-color: #808080;
 }
 
+.project-card-disabled {
+  cursor: default;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card-disabled:hover {
+  transform: none;
+}
+
+.project-card-placeholder {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
 /* ==========================================================================
    12. Project Detail Pages
    ========================================================================== */
@@ -844,17 +864,16 @@ main {
   order: 1;
 }
 
-.project-detail-image-solo {
-  width: 55%;
-  max-width: 480px;
-  margin: 0;
+.project-detail-pair:first-of-type {
+  grid-template-columns: 1fr 280px;
 }
 
-.project-detail-image-solo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
+.project-detail-pair:first-of-type img {
+  background-color: #FAFAF8;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  box-sizing: border-box;
+  filter: saturate(0.82);
 }
 
 .project-detail-box-title {
@@ -1099,7 +1118,8 @@ main {
   }
 
   .project-detail-pair,
-  .project-detail-pair:nth-of-type(2n) {
+  .project-detail-pair:nth-of-type(2n),
+  .project-detail-pair:first-of-type {
     grid-template-columns: 1fr;
     gap: 16px;
   }
@@ -1111,11 +1131,6 @@ main {
 
   .project-detail-pair .project-detail-box {
     transform: none;
-  }
-
-  .project-detail-image-solo {
-    width: 100%;
-    max-width: none;
   }
 
   .project-detail-boxes {
