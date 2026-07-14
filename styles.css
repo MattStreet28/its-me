@@ -578,7 +578,16 @@ main {
 }
 
 .project-card-2 {
-  background-color: #6B6B6B;
+  background-color: transparent;
+  min-height: unset;
+  padding: 0;
+}
+
+.project-card-2 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
 
 .project-card-3 {
