@@ -844,6 +844,19 @@ main {
   order: 1;
 }
 
+.project-detail-image-solo {
+  width: 55%;
+  max-width: 480px;
+  margin: 0;
+}
+
+.project-detail-image-solo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
 .project-detail-box-title {
   font-family: var(--font-serif);
   font-size: 22px;
@@ -1098,6 +1111,11 @@ main {
 
   .project-detail-pair .project-detail-box {
     transform: none;
+  }
+
+  .project-detail-image-solo {
+    width: 100%;
+    max-width: none;
   }
 
   .project-detail-boxes {
