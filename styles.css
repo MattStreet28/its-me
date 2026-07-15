@@ -558,6 +558,20 @@ main {
   border-radius: 20px;
 }
 
+.project-card-6 {
+  background-color: transparent;
+  position: relative;
+}
+
+.project-card-6 img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
 /* ==========================================================================
    12. Project Detail Pages
    ========================================================================== */

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw auf dem Mac Mini – Agile Coach &amp; Scrum Master</title>
+  <meta name="description" content="KI-Agent OpenClaw auf einem alten Mac Mini (2014) zum Laufen gebracht – Projekt-Detailseite">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html#projekte" class="navbar-logo" aria-label="Zurück zur Startseite">
+      <span class="nav-logo" aria-hidden="true">👋</span>
+    </a>
+    <a href="mailto:mathias.strasser@gmx.de" class="btn-pill">Kontakt</a>
+  </header>
+  <div class="nav-fade"></div>
+
+  <main>
+
+    <section class="project-detail-hero">
+      <img
+        src="OpenClaw/Header Detail.png"
+        alt="Mac Mini (2014) auf einem Holztisch, bereit für das OpenClaw-Experiment"
+        class="project-hero-img"
+      >
+    </section>
+
+    <section class="project-detail-content">
+      <div class="project-layout-wrapper">
+        <div class="project-main">
+          <h1 class="project-headline">OpenClaw auf dem <em>Mac Mini</em></h1>
+          <p class="project-subtext">
+            Ein KI-Agent, ein acht Jahre alter Mac Mini und kein einziger guter Grund – nur Neugier
+          </p>
+
+          <div class="project-divider"></div>
+
+          <div class="project-text">
+            <div class="project-text-column">
+              <p>
+                Warum probiert man OpenClaw auf einem Mac Mini von 2014 aus? Ehrlich gesagt: kein Grund, kein Business Case, einfach Neugier. Der Mini stand ungenutzt herum, also wurde er kurzerhand zum Testlabor für einen lokalen KI-Agenten.
+              </p>
+              <p>
+                Erster Versuch: Ollama installieren und Qwen3.5 laden. Das Modell lässt sich zwar sauber herunterladen, hängt sich aber schon bei der ersten Begrüßung in einer endlosen Denkschleife auf – für die alte Hardware schlicht zu viel Reasoning-Overhead.
+              </p>
+            </div>
+
+            <div class="project-text-column">
+              <p>
+                Also runter auf ein kleineres Modell: Llama 3.2 mit 3 Milliarden Parametern läuft spürbar flüssiger. Mutig genug installiert, folgt direkt OpenClaw – dabei landet der npm-Befehl aus Versehen im Ollama-Chat statt im Terminal, und das Modell erklärt selbstbewusst ein frei erfundenes Tool.
+              </p>
+              <p>
+                Im zweiten Anlauf klappt die echte Installation: openclaw-onboard fragt nach dem Kanal, die Wahl fällt auf WhatsApp. Der Agent startet lokal mit Llama als Gehirn – doch selbst mit deaktivierten Agenten und Funktionen kommt über WhatsApp eine wirre Antwort zurück. Die Recherche danach zeigt: Der Mac Mini von 2014 ist für den Betrieb schlicht zu alt.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-sidebar">
+          <div class="project-meta-group">
+            <span class="project-meta-label">Year</span>
+            <p class="project-meta-value">2026</p>
+          </div>
+          <div class="project-meta-group">
+            <span class="project-meta-label">Kategorien</span>
+            <p class="project-meta-value">KI-Experiment</p>
+            <p class="project-meta-value">Homelab</p>
+            <p class="project-meta-value">Lokale LLMs</p>
+          </div>
+          <div class="project-meta-group">
+            <span class="project-meta-label">Stack</span>
+            <p class="project-meta-value">Ollama</p>
+            <p class="project-meta-value">Qwen3.5 &amp; Llama 3.2</p>
+            <p class="project-meta-value">OpenClaw</p>
+            <p class="project-meta-value">WhatsApp</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-detail-pairs">
+        <div class="project-detail-pair">
+          <img src="OpenClaw/1.png" alt="Terminal mit Ollama-Download von Qwen3.5, das Modell hängt in einer endlosen Denkschleife">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Ollama &amp; Qwen3.5</h4>
+            <p>Qwen3.5 4B lädt sauber herunter (3,4 GB) – doch schon bei der einfachsten Begrüßung verschwindet das Modell in einer endlosen „Thinking..."-Schleife. Der Mac Mini kommt mit dem Reasoning nicht hinterher.</p>
+          </div>
+        </div>
+        <div class="project-detail-pair">
+          <img src="OpenClaw/2.png" alt="Terminal mit Ollama und Llama 3.2, das Modell antwortet zuverlässig auf Deutsch">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Wechsel auf Llama 3.2</h4>
+            <p>Qwen abgebrochen, stattdessen llama3.2:3b geladen – kleineres Modell, spürbar schneller, antwortet sauber auf Deutsch. Mutig genug, direkt im Anschluss openclaw zu installieren.</p>
+          </div>
+        </div>
+        <div class="project-detail-pair">
+          <img src="OpenClaw/3.png" alt="Llama erklärt selbstbewusst ein frei erfundenes Tool namens OpenCLAW">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Der Tippfehler</h4>
+            <p>Der npm-Befehl landet aus Versehen im Ollama-Chat statt im Terminal. Llama nimmt die Aufgabe trotzdem ernst und erklärt selbstbewusst, was „OpenCLAW" angeblich kann – frei erfunden, aber überzeugend formuliert.</p>
+          </div>
+        </div>
+        <div class="project-detail-pair">
+          <img src="OpenClaw/4.png" alt="openclaw-onboard im Terminal fragt nach dem Kommunikationskanal, WhatsApp ist ausgewählt">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Der echte Onboarding-Lauf</h4>
+            <p>Diesmal im echten Terminal: openclaw-onboard startet und fragt nach dem Kommunikationskanal. Unter rund 30 Optionen – von Telegram über Signal bis Discord – fällt die Wahl auf WhatsApp.</p>
+          </div>
+        </div>
+        <div class="project-detail-pair">
+          <img src="OpenClaw/5.png" alt="openclaw-tui läuft lokal mit Llama 3.2 als Agenten-Modell">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Der Agent geht live</h4>
+            <p>openclaw-tui läuft lokal mit ollama/llama3.2:3b als Gehirn, Token-Budget 131k. Für einen Mac Mini von 2014 ein ambitioniertes Setup.</p>
+          </div>
+        </div>
+        <div class="project-detail-pair">
+          <img src="OpenClaw/WhatsAppFail.png" alt="WhatsApp-Chat mit einer wirren, unpassenden Antwort trotz deaktivierter Agenten-Funktionen">
+          <div class="project-detail-box">
+            <h4 class="project-detail-box-title">Der Fail</h4>
+            <p>Eigentlich sind alle Agenten und Funktionen deaktiviert – trotzdem antwortet OpenClaw über WhatsApp mit wirrem, unpassendem Text. Die Recherche danach zeigt: Der Mac Mini von 2014 ist schlicht zu alt für den Agenten-Betrieb.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="kontakt">
+    <div class="footer-inner">
+      <p class="footer-headline">Learn Iterate <em>Elevate</em></p>
+      <div class="footer-contact">
+        <div class="footer-contact-left">
+          <p class="footer-name">Mathias Strasser, Agile Coach – AI Enthusiast</p>
+          <div class="footer-socials">
+            <a href="https://linkedin.com/in/mathias-straßer" class="footer-icon" aria-label="LinkedIn-Profil" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:mathias.strasser@gmx.de" class="footer-icon" aria-label="E-Mail schreiben">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-badges">
+          <img src="Badges/SA CSM.png" alt="Certified Scrum Master (Scrum Alliance)" class="footer-badge">
+          <img src="Badges/SAFe Scrum Master 4.png" alt="SAFe Scrum Master 4" class="footer-badge">
+          <img src="Badges/SAFe Practioner.png" alt="SAFe Practitioner" class="footer-badge">
+          <img src="Badges/SAFe SPC.png" alt="SAFe Practice Consultant (SPC) 5" class="footer-badge">
+          <img src="Badges/Certified Delivery .png" alt="Certified Delivery Professional (CDP)" class="footer-badge">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
