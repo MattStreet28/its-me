@@ -24,7 +24,7 @@
 
     <section class="project-detail-hero">
       <img
-        src="n8n/Header Detail.png"
+        src="n8n/Header Detail.jpg"
         alt="Backlog Autopilot – n8n-Workflow im Editor"
         class="project-hero-img"
       >
@@ -86,42 +86,42 @@
 
       <div class="project-detail-pairs">
         <div class="project-detail-pair">
-          <img src="n8n/Backlog.png" alt="Linear-Backlog vor dem Workflow-Lauf">
+          <img src="n8n/Backlog.jpg" alt="Linear-Backlog vor dem Workflow-Lauf">
           <div class="project-detail-box">
             <h4 class="project-detail-box-title">Der Ausgangs-Backlog</h4>
             <p>13 Tickets im Linear Backlog des Beispielprojekts „Deliver" der Inhalt von unterschiedlicher Qualität.</p>
           </div>
         </div>
         <div class="project-detail-pair">
-          <img src="n8n/Del7.png" alt="Linear-Ticket DEL-7 im Rohzustand">
+          <img src="n8n/Del7.jpg" alt="Linear-Ticket DEL-7 im Rohzustand">
           <div class="project-detail-box">
             <h4 class="project-detail-box-title">Ein Ticket im Rohzustand</h4>
             <p>Beispiel DEL-7 „Warenkorb anzeigen": keine Struktur keine Testkriterien.</p>
           </div>
         </div>
         <div class="project-detail-pair">
-          <img src="n8n/Prompt.png" alt="n8n-Node Message a Model mit Gemini-Prompt">
+          <img src="n8n/Prompt.jpg" alt="n8n-Node Message a Model mit Gemini-Prompt">
           <div class="project-detail-box">
             <h4 class="project-detail-box-title">Der Prompt</h4>
             <p>Für jedes Ticket schickt der Workflow Titel und Kontext an Gemini, mit fester Rollenanweisung „Du bist ein erfahrener Product Owner. Verbessere die folgende User Story. Formuliere Rolle, Ziel, Nutzen. Überarbeite die ACs und ergänze 3 Testkriterien."</p>
           </div>
         </div>
         <div class="project-detail-pair">
-          <img src="n8n/Backlog neu.png" alt="Linear-Backlog nach dem Workflow-Lauf mit AI-verbesserten Tickets">
+          <img src="n8n/Backlog neu.jpg" alt="Linear-Backlog nach dem Workflow-Lauf mit AI-verbesserten Tickets">
           <div class="project-detail-box">
             <h4 class="project-detail-box-title">Der neue Backlog</h4>
             <p>Nach dem Lauf ist der Backlog von 13 auf 26 Tickets gewachsen: Jedes Original bekommt eine „AI Verbessert"-Version, statt einfach überschrieben zu werden.</p>
           </div>
         </div>
         <div class="project-detail-pair">
-          <img src="n8n/Del7 Verbessert.png" alt="AI-verbessertes Ticket DEL-256 mit vollständiger User Story">
+          <img src="n8n/Del7 Verbessert.jpg" alt="AI-verbessertes Ticket DEL-256 mit vollständiger User Story">
           <div class="project-detail-box">
             <h4 class="project-detail-box-title">Vorher/Nachher am Beispiel</h4>
             <p>Aus „Warenkorb anzeigen" wird eine vollständige User Story im „Als Nutzer möchte ich..."-Format ACs überarbeitet mit Testkriterien.</p>
           </div>
         </div>
         <div class="project-detail-pair">
-          <img src="n8n/Kachel.png" alt="Der komplette n8n-Workflow im Überblick">
+          <img src="n8n/Kachel.jpg" alt="Der komplette n8n-Workflow im Überblick">
           <div class="project-detail-box">
             <h4 class="project-detail-box-title">Der Workflow im Überblick</h4>
             <p><strong>Get many issues</strong> holt alle Tickets aus Linear, <strong>Filter</strong> behält nur den Backlog. <strong>Loop Over Items</strong> geht sie einzeln durch: Jedes landet bei <strong>Message a model</strong>, wo Gemini mit dem Product-Owner-Prompt eine verbesserte Version erzeugt. <strong>Code in JavaScript</strong> parst die JSON-Antwort, <strong>Create an issue</strong> legt daraus das neue „AI Verbessert"-Ticket in Linear an – Original bleibt unangetastet.</p>
